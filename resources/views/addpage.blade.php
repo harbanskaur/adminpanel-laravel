@@ -1,23 +1,16 @@
 @extends('layouts.main')
-
-@push ('title')
-<title></title>
-@endpush 
-
 @section('main-section')
+{{-- section starts --}}
 <div class="maincontainer">
-@include('layouts.left')
-    <div class="right">	
-
+    @include('layouts.left')
+    <div class="right">
         <h2>Page Manager</h2>
-        
         <!--div starts here--->			    					 
             <div class="add">
                 <div class="addpage"> Add page</div> 
                     <form method="post" action="{{url(isset($findrec) ? 'edit-data/'.$findrec[0]->id : '/add-page' )}}">
-                        {{csrf_field()}}
+                    {{csrf_field()}}
                     <!-- table starts -->
-                    <input type="hidden" name="edited" />
                         <table class="table3" border="1px solid" >												
                             <tr>						 
                                 <td>Name*
@@ -38,16 +31,14 @@
                                 </td>
                             </tr>				
                         </table>
-                        
-                    <!-- table3 ends -->
-                    
-                <input type="submit" value="save" class="save" name="save"/>
-              
+                    <!-- table3 ends -->   
+                    <input type="submit" value="save" class="save" name="save"/>
                 </form>
             </div>
             <!-- div ends here -->
         </div>
     <!--right div ends--->
     </div>
-    <!----middlecontainer ends -->
+<!----middlecontainer ends -->
+{{-- section ends  --}}
 @endsection

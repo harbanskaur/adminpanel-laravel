@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\addpage;
-use App\Models\category;
-use App\Models\login;
-use App\Models\product;
+use App\Models\addpage;//model
+use App\Models\category;//model
+use App\Models\login;//model
+use App\Models\product;//model
 use Illuminate\Http\Request;
 
 class crudcontroller extends Controller

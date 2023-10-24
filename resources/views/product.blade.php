@@ -1,8 +1,6 @@
 @extends('layouts.main')
-@push('title')
-<title>Product add</title>
-@endpush 
 @section('main-section')
+{{-- section starts --}}
 	<div class="maincontainer">
 		@include('layouts/left')	
 		<div class="right">			
@@ -11,6 +9,7 @@
 			<p class="link"><a href="">Click here</a> to create <a href="">New product</a></p>
 			<form method="post" action="{{Route('record')}}">
 				{{csrf_field()}}
+				{{-- table starts --}}
 				<table class="table">
 					<tr>
 						<td id="search">Search</td>
@@ -22,8 +21,10 @@
 						</td>
 					</tr>
 				</table>
+				{{-- table ends  --}}
 			</form>
 			<p>Page 1 of 2, showing  2 records out of 4 total, starting on record 1 , ending on 2</p>
+			{{-- table starts --}}
 			<table class="table2">
 				<tr>
 					<th>Id</th>
@@ -59,26 +60,10 @@
 					<td colspan="8">{{$data->Links('pagi')}}</td>
 				</tr>
 			</table>
-			<style>
-				.links{
-					height:50px;
-				}
-				.pagnation{
-					list-style:none;
-					margin-top:60px;
-				}
-				.pagination li{ 
-					float: left;
-					list-style: none;
-					padding:5px;
-					border:1px solid #ccc;
-					position:relative;
-					top:0px;
-					left:246px;
-				}
-			</style>
+			{{-- table ends --}}
 			@endisset			  
 		</div>
 	</div>
+	{{-- section ends --}}
 @endsection
    

@@ -1,8 +1,6 @@
 @extends('layouts.main')
-@push ('title')
-<title></title>
-@endpush 
 @section('main-section')
+{{-- section starts --}}
 <div class="inner2">
 @if (session('success'))
     <div class="danger-alert">
@@ -11,6 +9,7 @@
 @endif
     <form method="post" action="{{Route('login.post')}}">
     @csrf
+    {{-- table starts --}}
         <table class="logintable">
             <tr>
                 <th colspan="2" class="login" >Login</th>
@@ -28,6 +27,8 @@
                 <td><input type="submit" value="Login" class="button" name="save"/></td>
             </tr>
         </table>
+        {{-- table ends  --}}
     </form>
 </div>
+{{-- section ends  --}}
 @endsection

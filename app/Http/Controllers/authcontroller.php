@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 use App\Models\login;
 use Illuminate\Http\Request;
 
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Session;
-use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;//class for authentication
+use Illuminate\Support\Facades\Session;// inbuild class
+use Illuminate\Support\Facades\Hash; // inbuild class
 
 class authcontroller extends Controller
 {
@@ -32,7 +32,6 @@ class authcontroller extends Controller
     public function logout() {
         Session::flush();
         Auth::logout();
-  
         return Redirect('/');
     }
 }

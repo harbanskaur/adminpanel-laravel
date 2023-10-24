@@ -297,4 +297,19 @@ body{
 	padding: 10px;
 	border-radius: 5px;
 }
-
+.links{
+   height:50px;
+}
+.pagnation{
+   list-style:none;
+   margin-top:60px;
+}
+.pagination li{ 
+   float: left;
+   list-style: none;
+   padding:5px;
+   border:1px solid #ccc;
+   position:relative;
+   top:0px;
+   left:246px;
+}
