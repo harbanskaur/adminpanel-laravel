@@ -5,8 +5,8 @@ use App\Models\login;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;//class for authentication
-use Illuminate\Support\Facades\Session;// inbuild class
-use Illuminate\Support\Facades\Hash; // inbuild class
+use Illuminate\Support\Facades\Session;// inbuild facades
+use Illuminate\Support\Facades\Hash; // inbuild facades
 
 class authcontroller extends Controller
 {
